@@ -1,0 +1,12 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+#pass-info {
+    font-weight: bold;
+}

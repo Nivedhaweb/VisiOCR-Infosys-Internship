@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visiting Pass</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .visiting-pass {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .visiting-pass h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .info {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .info strong {
+            font-weight: bold;
+        }
+        .button-container {
+            text-align: center;
+        }
+        .button-container button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="visiting-pass">
+            <h1>Visiting Pass</h1>
+            <div class="info">
+                <p><strong>Name:</strong> {{ name }}</p>
+                <p><strong>Date of Birth:</strong> {{ birth_date }}</p>
+                <p><strong>Age:</strong> {{ age }}</p>
+                {% if pan_number %}
+                <p><strong>PAN Number:</strong> {{ pan_number }}</p>
+                {% endif %}
+                {% if aadhaar_number %}
+                <p><strong>Aadhaar Number:</strong> {{ aadhaar_number }}</p>
+                {% endif %}
+            </div>
+            <div class="button-container">
+                <button class="download-btn">Download as PDF</button>
+                <button class="file-upload-btn">Upload Image</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
